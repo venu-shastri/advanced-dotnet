@@ -1,0 +1,5 @@
+C:\Users\user\source\repos\ValidationLibrary\ValidationLibrary\bin\Debug\ValidationLibrary.dll
+C:\Users\user\source\repos\ValidationLibrary\ValidationLibrary\bin\Debug\ValidationLibrary.pdb
+C:\Users\user\source\repos\ValidationLibrary\ValidationLibrary\obj\Debug\ValidationLibrary.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\ValidationLibrary\ValidationLibrary\obj\Debug\ValidationLibrary.dll
+C:\Users\user\source\repos\ValidationLibrary\ValidationLibrary\obj\Debug\ValidationLibrary.pdb
