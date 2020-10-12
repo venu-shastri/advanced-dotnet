@@ -3,3 +3,9 @@ C:\Users\user\source\repos\ValidationLibrary\ValidationLibrary\bin\Debug\Validat
 C:\Users\user\source\repos\ValidationLibrary\ValidationLibrary\obj\Debug\ValidationLibrary.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\ValidationLibrary\ValidationLibrary\obj\Debug\ValidationLibrary.dll
 C:\Users\user\source\repos\ValidationLibrary\ValidationLibrary\obj\Debug\ValidationLibrary.pdb
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ValidationLibrary\bin\Debug\ValidationLibrary.dll
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ValidationLibrary\bin\Debug\ValidationLibrary.pdb
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ValidationLibrary\obj\Debug\ValidationLibrary.csprojAssemblyReference.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ValidationLibrary\obj\Debug\ValidationLibrary.csproj.CoreCompileInputs.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ValidationLibrary\obj\Debug\ValidationLibrary.dll
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ValidationLibrary\obj\Debug\ValidationLibrary.pdb

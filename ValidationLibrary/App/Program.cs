@@ -11,8 +11,10 @@ namespace App
     public class Employee
     {
         [ValidationLibrary.RequiredAttribute]
+        [ValidationLibrary.Length(Length =10)]
         
         public string Name { get; set; }
+        [ValidationLibrary.Range(23,70)]
         public int Age { get; set; }
 
         public string Email { get; set; }

@@ -8,16 +8,64 @@ using System.Threading.Tasks;
 
 namespace ValidationLibrary
 {
+    [AttributeUsage(AttributeTargets.Property,AllowMultiple =true)]
+    public abstract class ValidatorAttribute:System.Attribute
+    {
+        public abstract bool Validate(object value);
+        
+    }
 
-    [AttributeUsage(AttributeTargets.Property,AllowMultiple =false)]
-    public class RequiredAttribute:System.Attribute
+   
+    public class RequiredAttribute:ValidatorAttribute
     {
         //
-        public bool Validate(object value)
+        public override bool Validate(object value)
         {
 
             string data = value as string;
             return !string.IsNullOrEmpty(data);
+        }
+    }
+
+
+   
+    public class RangeAttribute : ValidatorAttribute
+    {
+        int max;
+        int min;
+        public RangeAttribute(int min,int max)
+        {
+            this.max = max;
+            this.min = min;
+        }
+        public override bool Validate(object value)
+        {
+
+            int _value;
+            if(Int32.TryParse(value as string,out _value))
+            {
+                if(_value > this.min && _value < this.max)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+
+
+    public class LengthAttribute:ValidatorAttribute
+    {
+        public int Length { get; set; }
+        public override bool Validate(object value)
+        {
+            string data = value as string;
+            if (data != null)
+            {
+                return data.Length <= Length;
+            }
+            return false;
+
         }
     }
     public class Validator
@@ -37,14 +85,18 @@ namespace ValidationLibrary
                 {
                     Console.WriteLine($"{property.Name} && {property.GetValue(target)}");
                     //Query Property Metdata for the existance of Custom Attribute - RequiredAttribute
-                   RequiredAttribute[] reqAttributes= property.GetCustomAttributes(typeof(RequiredAttribute), true) as RequiredAttribute[];
-                    if ( reqAttributes!=null && reqAttributes.Length > 0)
+                    ValidatorAttribute[] validatorAttributes= property.GetCustomAttributes(typeof(ValidatorAttribute), true) as ValidatorAttribute[];
+                    if (validatorAttributes != null && validatorAttributes.Length > 0)
                     {
-                        RequiredAttribute _instance = reqAttributes[0];
-                        if (_instance.Validate(property.GetValue(target)))
+                        
+                        foreach(ValidatorAttribute validator in validatorAttributes)
                         {
-                            isValid = true;
+                            if(validator.Validate(property.GetValue(target)))
+                            {
+
+                            }
                         }
+                        
                     }
                 }
             }

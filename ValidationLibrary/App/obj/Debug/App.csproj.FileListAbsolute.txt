@@ -8,3 +8,13 @@ C:\Users\user\source\repos\ValidationLibrary\App\obj\Debug\App.csproj.CoreCompil
 C:\Users\user\source\repos\ValidationLibrary\App\obj\Debug\App.csproj.CopyComplete
 C:\Users\user\source\repos\ValidationLibrary\App\obj\Debug\App.exe
 C:\Users\user\source\repos\ValidationLibrary\App\obj\Debug\App.pdb
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\App\bin\Debug\App.exe.config
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\App\bin\Debug\App.exe
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\App\bin\Debug\App.pdb
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\App\bin\Debug\ValidationLibrary.dll
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\App\bin\Debug\ValidationLibrary.pdb
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\App\obj\Debug\App.csprojAssemblyReference.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\App\obj\Debug\App.csproj.CoreCompileInputs.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\App\obj\Debug\App.csproj.CopyComplete
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\App\obj\Debug\App.exe
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\App\obj\Debug\App.pdb
