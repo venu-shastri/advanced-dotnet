@@ -1,0 +1,6 @@
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\XMLFormatterLib\bin\Debug\XMLFormatterLib.dll
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\XMLFormatterLib\bin\Debug\XMLFormatterLib.pdb
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\XMLFormatterLib\obj\Debug\XMLFormatterLib.csprojAssemblyReference.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\XMLFormatterLib\obj\Debug\XMLFormatterLib.csproj.CoreCompileInputs.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\XMLFormatterLib\obj\Debug\XMLFormatterLib.dll
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\XMLFormatterLib\obj\Debug\XMLFormatterLib.pdb

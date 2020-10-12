@@ -8,10 +8,17 @@ using System.Threading.Tasks;
 
 namespace ValidationLibrary
 {
+    public class ValidationResult
+    {
+        public string PropertyName { get; set; }
+        public string ErrorContent { get; set; }
+
+    }
     [AttributeUsage(AttributeTargets.Property,AllowMultiple =true)]
     public abstract class ValidatorAttribute:System.Attribute
     {
         public abstract bool Validate(object value);
+        public string ErrorMessage { get; set; }
         
     }
 
@@ -70,10 +77,10 @@ namespace ValidationLibrary
     }
     public class Validator
     {
-        public bool Validate(object target)
+        public bool Validate(object target,out List<ValidationResult> validationSummary)
         {
             bool isValid = false;
-
+            validationSummary = new List<ValidationResult>();
             //Discover Object Type Details (Reflection)
             //Reflection :- API to query assembly metadata @runtime
 
@@ -83,7 +90,7 @@ namespace ValidationLibrary
                 System.Reflection.PropertyInfo[] properties = _typeDetails.GetProperties();
                 foreach(var property in properties)
                 {
-                    Console.WriteLine($"{property.Name} && {property.GetValue(target)}");
+                  
                     //Query Property Metdata for the existance of Custom Attribute - RequiredAttribute
                     ValidatorAttribute[] validatorAttributes= property.GetCustomAttributes(typeof(ValidatorAttribute), true) as ValidatorAttribute[];
                     if (validatorAttributes != null && validatorAttributes.Length > 0)
@@ -91,8 +98,17 @@ namespace ValidationLibrary
                         
                         foreach(ValidatorAttribute validator in validatorAttributes)
                         {
-                            if(validator.Validate(property.GetValue(target)))
+                            if(!validator.Validate(property.GetValue(target)))
                             {
+                                if (validationSummary == null)
+                                {
+                                    validationSummary = new List<ValidationResult>();
+                                }
+                                ValidationResult _vr = new ValidationResult() {
+                                    PropertyName = property.Name, 
+                                    ErrorContent = validator.ErrorMessage };
+                                validationSummary.Add(_vr);
+                                
 
                             }
                         }
@@ -103,6 +119,11 @@ namespace ValidationLibrary
             else
             {
                 throw new InvalidOperationException("target is not an instance of class");
+            }
+            if(validationSummary.Count ==0)
+            {
+                isValid = true;
+               
             }
             return isValid;
 

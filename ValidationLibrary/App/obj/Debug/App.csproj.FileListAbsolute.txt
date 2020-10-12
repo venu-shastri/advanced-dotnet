@@ -18,3 +18,5 @@ D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\App\obj\Debug\App.
 D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\App\obj\Debug\App.csproj.CopyComplete
 D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\App\obj\Debug\App.exe
 D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\App\obj\Debug\App.pdb
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\App\bin\Debug\XMLFormatterLib.dll
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\App\bin\Debug\XMLFormatterLib.pdb
