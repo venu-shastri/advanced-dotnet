@@ -1,0 +1,7 @@
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ReuseProbs\bin\Debug\ReuseProbs.exe.config
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ReuseProbs\bin\Debug\ReuseProbs.exe
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ReuseProbs\bin\Debug\ReuseProbs.pdb
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ReuseProbs\obj\Debug\ReuseProbs.csprojAssemblyReference.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ReuseProbs\obj\Debug\ReuseProbs.csproj.CoreCompileInputs.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ReuseProbs\obj\Debug\ReuseProbs.exe
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ReuseProbs\obj\Debug\ReuseProbs.pdb
