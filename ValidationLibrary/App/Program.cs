@@ -28,17 +28,19 @@ namespace App
 
             ValidationLibrary.Validator _validator = new ValidationLibrary.Validator();
             List<ValidationLibrary.ValidationResult> _summury = null;
-            if(!_validator.Validate(_emp,out _summury))
+            System.Diagnostics.Stopwatch _stopWatch = new System.Diagnostics.Stopwatch();
+            _stopWatch.Start();
+            if (!_validator.Validate(_emp, out _summury))
             {
-                foreach(var vr in _summury)
+                foreach (var vr in _summury)
                 {
                     Console.WriteLine($"{vr.PropertyName} && {vr.ErrorContent}");
                 }
 
             }
+            _stopWatch.Stop();
 
-            XMLFormatterLib.XMLFormatter _formatter = new XMLFormatterLib.XMLFormatter("D:/test.xml");
-            _formatter.WriteObject(_emp);
+            Console.WriteLine($"Total time taken for object Validation {_stopWatch.ElapsedMilliseconds}");
         }
     }
 }

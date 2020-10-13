@@ -4,6 +4,7 @@ using System.Linq;
 using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ValidationLibrary
@@ -28,7 +29,7 @@ namespace ValidationLibrary
         //
         public override bool Validate(object value)
         {
-
+            Thread.Sleep(2000);
             string data = value as string;
             return !string.IsNullOrEmpty(data);
         }
@@ -47,7 +48,7 @@ namespace ValidationLibrary
         }
         public override bool Validate(object value)
         {
-
+            Thread.Sleep(2000);
             int _value;
             if(Int32.TryParse(value as string,out _value))
             {
@@ -66,6 +67,7 @@ namespace ValidationLibrary
         public int Length { get; set; }
         public override bool Validate(object value)
         {
+            Thread.Sleep(2000);
             string data = value as string;
             if (data != null)
             {
