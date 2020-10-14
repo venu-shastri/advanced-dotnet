@@ -74,13 +74,17 @@ namespace ThreaingDemo
 
             Thread _t1 = new Thread(DbHandler.Instance.Read) { Name = "T1" };
             Thread _t2 = new Thread(DbHandler.Instance.Write) { Name = "T2" };
-            Thread _t3 = new Thread(DbHandler.Instance.Write) { Name = "T3" };
+           Thread _t3 = new Thread(DbHandler.Instance.Write) { Name = "T3" };
             Thread _t4 = new Thread(DbHandler.Instance.Read) { Name = "T4" };
 
             _t1.Start();
-            _t2.Start();
-            _t3.Start();
+          //  _t2.Start();
+            //_t3.Start();
             _t4.Start();
+
+            Object obj = new Object();
+
+
             // T1/T4 | T2/T3
 
         }

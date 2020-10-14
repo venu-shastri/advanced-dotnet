@@ -10,28 +10,46 @@ namespace ThreaingDemo
     public class DbHandler
     {
         public static readonly DbHandler Instance = new DbHandler();
+        Object _readSyncObject = new object();
+        Object _writeSyncObject = new object();
         private DbHandler() { }
 
-        [System.Runtime.CompilerServices.MethodImpl(
-          methodImplOptions: System.Runtime.CompilerServices.MethodImplOptions.Synchronized)]
+       
         public void Read() {
-
-            for (int i = 0; i < 30; i++)
+            Console.WriteLine($"Thread {Thread.CurrentThread.Name} waiting ahead of Critical Scetion");
+            
+            Monitor.Enter(_readSyncObject);
+            try
             {
-
-                Console.WriteLine($"DB Handler Read Operation.....{Thread.CurrentThread.Name}");
-                Thread.Sleep(2000);
+                for (int i = 0; i < 30; i++)
+                {
+                    Console.WriteLine($"Thread {Thread.CurrentThread.Name} Enterd Critical Scetion");
+                    Console.WriteLine($"DB Handler Read Operation.....{Thread.CurrentThread.Name}");
+                    if (i == 5)
+                    {
+                        return;
+                    }
+                    Thread.Sleep(2000);
+                }
             }
 
+            finally
+            {
+                Monitor.Exit(_readSyncObject);
+                Console.WriteLine($"Thread {Thread.CurrentThread.Name} Exited from  Critical Scetion");
+            }
         }
 
-        [System.Runtime.CompilerServices.MethodImpl(
-            methodImplOptions:System.Runtime.CompilerServices.MethodImplOptions.Synchronized)]
+       
         public void Write() {
-            for (int i = 0; i < 10; i++)
+
+            lock (_writeSyncObject)
             {
-                Console.WriteLine($"DB Handler Write Operation.....{Thread.CurrentThread.Name}");
-                Thread.Sleep(2000);
+                for (int i = 0; i < 10; i++)
+                {
+                    Console.WriteLine($"DB Handler Write Operation.....{Thread.CurrentThread.Name}");
+                    Thread.Sleep(2000);
+                }
             }
         }
     }

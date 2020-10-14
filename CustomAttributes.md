@@ -304,3 +304,121 @@ static void NewBackGroundTask(object param){
  ThreadPool.QueueUserWorkItem(_backGroundTaskPointer);
 ```
 
+
+
+#### CLR Support for Object Synchronization
+
+```C#
+[System.Runtime.Remoting.Contexts.Synchronization]
+   public class FileHandler:ContextBoundObject
+    {
+       ///....
+
+
+    }
+```
+
+### CLR support for Method Synchronization
+
+```C#
+public class DbHandler
+    {
+        public static readonly DbHandler Instance = new DbHandler();
+        private DbHandler() { }
+
+        [System.Runtime.CompilerServices.MethodImpl(
+          methodImplOptions: System.Runtime.CompilerServices.MethodImplOptions.Synchronized)]
+        public void Read() {
+
+            }
+    
+      /*
+       public void Read() {
+       Monitor.Enter(this);
+       
+       
+       Monitor.Exit(this)
+
+            }
+      
+      
+      */
+
+        }
+
+```
+
+#### Monitor
+
+---
+
+> Protect Critical Sections : Part of program ,  executed by one thread @time without any interruption 
+>
+> Allows to acquire exclusive lock on object
+>
+> Local Process Thread Synchronization
+>
+> Depends on object header
+>
+> Monitors can be used  in Method Scope only 
+>
+> Thread Affinity
+
+```C#
+class A{
+    
+    public void Method(){
+        Monitor.Enter(this);
+        ///Criticial Section Code
+        Monitor.Exit(this);
+    }
+}
+
+A obj=new A(); 
+Thread t1=new Thread(obj.Method);
+t1.Start();
+
+
+```
+
+#### Mointor Best Practices
+
+----
+
+- avoid using "this" 
+
+  - use local object references
+
+- Ensure "Monitor.Exit()" invoked
+
+  - use try {} finally{}
+
+  - ```C#
+             Monitor.Enter(_readSyncObject);
+                try
+                {
+                    .....Critical Section
+                }
+    
+                finally
+                {
+                 Monitor.Exit(_readSyncObject);
+                }
+    ```
+
+    Or use Compiler Feature  "lock"
+
+    
+
+```C#
+ lock (_writeSyncObject)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    Console.WriteLine($"DB Handler Write Operation.....{Thread.CurrentThread.Name}");
+                    Thread.Sleep(2000);
+                }
+            }
+        }
+```
+
