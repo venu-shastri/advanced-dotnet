@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Installer", "Installer\Inst
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaitHandleEventDemo", "WaitHandleEventDemo\WaitHandleEventDemo.csproj", "{470EA662-FEE5-48C4-81AA-DE537C2769A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPL", "TPL\TPL.csproj", "{8EF0B177-48B4-4109-B1C3-1DF143138066}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{470EA662-FEE5-48C4-81AA-DE537C2769A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{470EA662-FEE5-48C4-81AA-DE537C2769A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{470EA662-FEE5-48C4-81AA-DE537C2769A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EF0B177-48B4-4109-B1C3-1DF143138066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EF0B177-48B4-4109-B1C3-1DF143138066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EF0B177-48B4-4109-B1C3-1DF143138066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EF0B177-48B4-4109-B1C3-1DF143138066}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

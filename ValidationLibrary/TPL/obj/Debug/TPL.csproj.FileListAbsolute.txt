@@ -1,0 +1,7 @@
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\TPL\bin\Debug\TPL.exe.config
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\TPL\bin\Debug\TPL.exe
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\TPL\bin\Debug\TPL.pdb
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\TPL\obj\Debug\TPL.csprojAssemblyReference.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\TPL\obj\Debug\TPL.csproj.CoreCompileInputs.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\TPL\obj\Debug\TPL.exe
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\TPL\obj\Debug\TPL.pdb
