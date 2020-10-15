@@ -4,4 +4,3 @@ D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ThreaingDemo\bin\D
 D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ThreaingDemo\bin\Debug\ThreaingDemo.pdb
 D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ThreaingDemo\obj\Debug\ThreaingDemo.exe
 D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ThreaingDemo\obj\Debug\ThreaingDemo.pdb
-D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ThreaingDemo\obj\Debug\ThreaingDemo.csprojAssemblyReference.cache

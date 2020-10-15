@@ -1,3 +1,5 @@
+
+
 ### C#Cusom Attribute
 
 ---
@@ -422,3 +424,53 @@ t1.Start();
         }
 ```
 
+```C#
+DeadLock Code 
+    - Acquire Lock in same order
+    - Don't start the threads unless all the required resources are avaiable
+    - use signals to notify availability of resources.
+
+//T1
+Abc(){
+lock(a){
+....
+   			 lock(b)
+  			  {
+    
+   			 }
+
+		}
+}
+....
+//T2
+XYZ(){
+lock(b){
+ .....
+   		 lock(a)
+    	{
+    
+    	}
+    
+	}
+}
+```
+
+
+
+#### WaitHandles
+
+---
+
+> Signaling 
+>
+> WaitHandle (Wait / Signal)
+>
+> - Mutex
+>   - Local
+>   - Global (Named Mutex)
+>     - Synchronize Inter Process Thread
+> - Semaphore
+>   - Counting 
+> - Events
+>   - Manual
+>   - AutoReset

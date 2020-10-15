@@ -1,0 +1,7 @@
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\Installer\bin\Debug\Installer.exe.config
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\Installer\bin\Debug\Installer.exe
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\Installer\bin\Debug\Installer.pdb
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\Installer\obj\Debug\Installer.csproj.CoreCompileInputs.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\Installer\obj\Debug\Installer.exe
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\Installer\obj\Debug\Installer.pdb
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\Installer\obj\Debug\Installer.csprojAssemblyReference.cache

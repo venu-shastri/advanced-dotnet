@@ -1,0 +1,6 @@
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\WaitHandleEventDemo\bin\Debug\WaitHandleEventDemo.exe.config
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\WaitHandleEventDemo\bin\Debug\WaitHandleEventDemo.exe
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\WaitHandleEventDemo\bin\Debug\WaitHandleEventDemo.pdb
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\WaitHandleEventDemo\obj\Debug\WaitHandleEventDemo.csproj.CoreCompileInputs.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\WaitHandleEventDemo\obj\Debug\WaitHandleEventDemo.exe
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\WaitHandleEventDemo\obj\Debug\WaitHandleEventDemo.pdb

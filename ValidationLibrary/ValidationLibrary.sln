@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReuseProbs", "ReuseProbs\Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreaingDemo", "ThreaingDemo\ThreaingDemo.csproj", "{AC1B789C-29C2-48C9-9F93-E146E8A0F581}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Installer", "Installer\Installer.csproj", "{D06A134D-22DE-42A3-8095-E7938FDAC36F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaitHandleEventDemo", "WaitHandleEventDemo\WaitHandleEventDemo.csproj", "{470EA662-FEE5-48C4-81AA-DE537C2769A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{AC1B789C-29C2-48C9-9F93-E146E8A0F581}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC1B789C-29C2-48C9-9F93-E146E8A0F581}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC1B789C-29C2-48C9-9F93-E146E8A0F581}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D06A134D-22DE-42A3-8095-E7938FDAC36F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D06A134D-22DE-42A3-8095-E7938FDAC36F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D06A134D-22DE-42A3-8095-E7938FDAC36F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D06A134D-22DE-42A3-8095-E7938FDAC36F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{470EA662-FEE5-48C4-81AA-DE537C2769A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{470EA662-FEE5-48C4-81AA-DE537C2769A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{470EA662-FEE5-48C4-81AA-DE537C2769A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{470EA662-FEE5-48C4-81AA-DE537C2769A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
