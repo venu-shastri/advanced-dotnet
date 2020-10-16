@@ -1,0 +1,37 @@
+How GC Works
+
+------------------------------
+OnDemand Invocation 
+Mannual Invocation : System.GC.Collect()
+"Request for New Allocation - might trigger GC"
+
+Mark/Prepare
+
+MARK Phase	
+
+1.GC Search For Live objects	from Gen 0...1...2 and LOH [Full Collection]
+2.How does GC determine Live Object
+  2.1 Collect Evidence
+	2.1.1 Roots (referenceS)
+		All Current Threads Stack
+                Live/Reachable Object
+		Static References (Global handles)
+		FinalizeQueue
+		F-Reachable Queue
+		CPU Registers
+3.Reachable Object Graph 
+
+Note: Optimize Mark Phase using Generation Based Collection
+	 System.Gc.Collect(Generation Value);
+	 ex:
+		System.GC.Collect(0); // Mark-Prepare Only On Generation 0 based objects
+		System.GC.Collect(1); // 0 and 1
+		System.GC.Collect(2);// 0,1 and 2
+
+
+Prepare Phase:
+	1.Remove unUsed(Not-reachable) Obejcts from the heap
+	  1.1 Introduce Holes in the Heap (Fragmentation)
+	    1.1.1 Compaction (Push Gen 0 ---> Gen 1 --->Gen 2----> Gen 2) peformed only on SOH
+
+					
