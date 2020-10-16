@@ -401,7 +401,7 @@ t1.Start();
                 {
                     .....Critical Section
                 }
-    
+      
                 finally
                 {
                  Monitor.Exit(_readSyncObject);
@@ -473,4 +473,87 @@ lock(b){
 >   - Counting 
 > - Events
 >   - Manual
+>     - All the threads - receive signal
+>     - Handle will not reset aitomatically
 >   - AutoReset
+>     - When WaitHanlde set - (Next) single thread receives signal 
+>     - Once Thread Receive Signal - wait handle state reset to Wait
+
+
+
+#### Asynchronous Program
+
+- Non Blocking Call- Caller and Calle methods executed by different threads.
+
+  
+
+```
+public class SearchService{
+
+public void Search(){
+ //....Expensive Task
+}
+
+}
+
+//Main Thread
+void SearchButton_Click(){
+
+Thread searchTaskThread=new Thread(Search);
+searchTaskThread.Start();
+
+}
+```
+
+- How to get result from Asynchronous task ?
+- How to get intermediate results?
+- How to cancel Asynchronous task
+- How to handle exception thrown from asynchronous task
+- How to get the current status of asynchronous task
+- How to Chain Asynchronous tasks
+- Parent - Children Relationship b/w tasks
+- UI thread marshaling Support ? 
+- How to pass arguments 
+- Can we run tasks parallely?
+
+>
+>
+>Dotnet Fx Options
+
+- Explicit Thread
+- Thread Pool thread
+- BackgroundWorker
+- Delegate.BeginInvoke() and Delegate.EndInvoke()
+- Task Parallel Library
+
+### TPL
+
+-----
+
+- Task Parallelism
+- Task or Task<> from System.Threading.Tasks
+- TaskFactory
+- TPL uses ThreadPool Threads
+- Each Task has unique ID
+
+
+
+#### Exception
+
+---
+
+> Instance of Class (Describes { Thread , method,Statck trace , message})
+>
+> who will instantiate :  VM Code, Application Code
+
+### Exception Handling
+
+---
+
+- Set reference and access exception details
+  - catch(NameOfExceptionType reference);
+
+
+
+
+

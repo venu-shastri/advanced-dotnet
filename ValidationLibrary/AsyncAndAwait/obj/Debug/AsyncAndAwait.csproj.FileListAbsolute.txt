@@ -1,0 +1,7 @@
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\AsyncAndAwait\bin\Debug\AsyncAndAwait.exe.config
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\AsyncAndAwait\bin\Debug\AsyncAndAwait.exe
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\AsyncAndAwait\bin\Debug\AsyncAndAwait.pdb
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\AsyncAndAwait\obj\Debug\AsyncAndAwait.csproj.CoreCompileInputs.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\AsyncAndAwait\obj\Debug\AsyncAndAwait.exe
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\AsyncAndAwait\obj\Debug\AsyncAndAwait.pdb
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\AsyncAndAwait\obj\Debug\AsyncAndAwait.csprojAssemblyReference.cache

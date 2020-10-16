@@ -28,6 +28,15 @@ namespace TPL
     {
         static void Main()
         {
+            while (true)
+            {
+                Console.WriteLine("Presss any Key to Send Http Request");
+                Console.ReadKey();
+                SendHttpRequest();
+            }
+        }
+        static void Main_ParentChild()
+        {
             Task _task = new Task(Maintask);
             _task.Start();
             _task.Wait();
@@ -161,6 +170,44 @@ namespace TPL
             _detachedTask.Start();
             Thread.Sleep(2000);
             Console.WriteLine("MainTask End");
+        }
+
+        static void SendHttpRequest()
+        {
+
+            Task<string> httpRequestTask = new Task<string>(()=> {
+
+                Console.WriteLine("Http Request Sent");
+                Thread.Sleep(1000);
+                Console.WriteLine("Http Request Completed");
+                Random _random = new Random();
+               int value= _random.Next(1, 5);
+                if (value % 2 == 0)
+                {
+                    return $"Http Respone Content {value} ";
+                }
+                throw new Exception($"Server Error {value}");
+
+            });
+
+           Task<string> httpResponseProcessingTask =httpRequestTask.ContinueWith<string>((pt) => {
+
+                Console.WriteLine($"Processing {pt.Result}");
+                Thread.Sleep(2000);
+                Console.WriteLine($"Processing {pt.Result} Complted");
+                return "Extracted Data From Http Response";
+
+            },TaskContinuationOptions.OnlyOnRanToCompletion | TaskContinuationOptions.NotOnFaulted);
+
+            httpRequestTask.ContinueWith((pt) => {
+
+                Console.WriteLine($"Writing Log Content {pt.Exception.InnerException.Message}");
+                Thread.Sleep(2000);
+                Console.WriteLine($"Log Write Operation Completed");
+
+            },TaskContinuationOptions.OnlyOnFaulted);
+
+            httpRequestTask.Start();
         }
     }
 }
