@@ -1,0 +1,68 @@
+Dispose Method Implementation Challenges
+
+1. Startergy for resticing an access to a dispose object
+2. Startergy for handling multiple dispose method calls
+3. Requires Explicit Invocation
+
+
+Dispose Method Chracterstics
+1. Requires Explicit Method Call - Deterministic Destructor
+2. Disposed Objects Requires One Gc Cycle to remove from the Memory , provided no other roots exist.
+
+
+Finalize method 
+
+1. Non Deterministic Destrcutor - Invoked Implicitly 
+2. Invoked on Finalizer Thread
+3. Finalized Object Requires minimum 2 GC Cycles
+4. Gc Mark an object only when object is not reachble
+
+
+
+How object is finalized
+
+
+
+Object Disposed Pattern
+
+
+
+Object Persistance :- "Preseve Object State" 
+
+Serialization and Deserialization
+
+
+Deep Serialization						Shallow Serialization
+
+1.Private and Non private Data Members				1.Public state of an instance.
+
+2.Runtime Type and Assembly Information				2.POX (plain old xml)
+
+3.Binary or SOAP Message Format					3.XML Format
+
+4.Requires Type must an-notate with [Serializable]		4.Requires Type must have public defualt Constructor
+
+5..Net remoting uses Deep Serailzation for object state transfer 5. .Net WebServices , ADO.net Entity Fx Uses Shallow Serialization
+
+Memento pattern
+Prototype Pattern
+backup and recovery
+Application offline - online
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
