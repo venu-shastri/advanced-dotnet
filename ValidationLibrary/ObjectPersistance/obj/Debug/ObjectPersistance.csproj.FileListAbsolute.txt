@@ -1,0 +1,7 @@
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ObjectPersistance\bin\Debug\ObjectPersistance.exe.config
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ObjectPersistance\bin\Debug\ObjectPersistance.exe
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ObjectPersistance\bin\Debug\ObjectPersistance.pdb
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ObjectPersistance\obj\Debug\ObjectPersistance.csprojAssemblyReference.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ObjectPersistance\obj\Debug\ObjectPersistance.csproj.CoreCompileInputs.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ObjectPersistance\obj\Debug\ObjectPersistance.exe
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\ObjectPersistance\obj\Debug\ObjectPersistance.pdb

@@ -401,7 +401,7 @@ t1.Start();
                 {
                     .....Critical Section
                 }
-      
+          
                 finally
                 {
                  Monitor.Exit(_readSyncObject);
@@ -555,5 +555,36 @@ searchTaskThread.Start();
 
 
 
+#### Data Lifetime
+
+----
+
+- Short-lived
+  - Method Execution 
+  - Stack
+  - Auto Cleanup
+  - Thread-safe
+- Long-lived
+  - Process 
+  - Static Area
+- Dynamic 
+  - Program Driven
+  - Heap
+  - Explicit Memory Management
+  - Dotnet - Garbage Collector
 
 
+
+#### Managed Heap
+
+----
+
+- Managed By Garbage Collector
+- Large Object Heap ( Object Size > 85Kb)
+- Small Object Heap ( < 85Kb)
+- Generation (Tag Value)
+  - 0 to 2
+  - Small Object Heap { 0....1....2}
+  - Large Object heap {2}
+    - Considered as Extension of Generation 2
+- New object (<85 Kb) allocation starts from Generation - 0
