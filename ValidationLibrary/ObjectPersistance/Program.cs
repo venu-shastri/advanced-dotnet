@@ -24,7 +24,7 @@ namespace ObjectPersistance
         
 
     }
-    [Serializable]
+  
     public class AddressInfo
     {
         public string Street { get; set; }
@@ -36,7 +36,7 @@ namespace ObjectPersistance
 
     }
     [Serializable]//Deep Serialization 
-    public class PatientInfo : Person, ISerializable, IXmlSerializable
+    public class PatientInfo : Person //, ISerializable, IXmlSerializable
     {
         public string MRN { get; set; }
         private string secretPassCode;
@@ -103,6 +103,31 @@ namespace ObjectPersistance
 
     }
 
+    public class AddressInfoSurrogator : ISerializationSurrogate
+    {
+        //Serialization
+        public void GetObjectData(object obj, SerializationInfo info, StreamingContext context)
+        {
+            AddressInfo _addressInfo = obj as AddressInfo;
+            info.AddValue(nameof(_addressInfo.City), _addressInfo.City);
+            info.AddValue(nameof(_addressInfo.State), _addressInfo.State);
+            info.AddValue(nameof(_addressInfo.Street), _addressInfo.Street);
+            info.AddValue(nameof(_addressInfo.PinCode), _addressInfo.PinCode);
+        }
+
+        //DeSerialization
+        public object SetObjectData(object obj, SerializationInfo info, StreamingContext context, ISurrogateSelector selector)
+        {
+            AddressInfo _addressInfo = obj as AddressInfo;
+            _addressInfo.City = info.GetString(nameof(_addressInfo.City));
+            _addressInfo.Street = info.GetString(nameof(_addressInfo.Street));
+            _addressInfo.State = info.GetString(nameof(_addressInfo.State));
+            _addressInfo.PinCode = info.GetString(nameof(_addressInfo.PinCode));
+            return _addressInfo;
+
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -116,14 +141,14 @@ namespace ObjectPersistance
                 Address = new AddressInfo { City = "BLR", State = "KA", PinCode = "560077", Street = "BLR" }
             };
 
-           // DeepBinarySerailzation(_patientInstance);
+           DeepBinarySerailzation(_patientInstance);
 
             // _patientInstance = null;
             // GC.Collect();
 
-            // object target= DeepBinaryDeSerailzation();
-           // Console.WriteLine( target.ToString());
-            ShallowSerialization(_patientInstance);
+            object target= DeepBinaryDeSerailzation();
+            Console.WriteLine( target.ToString());
+            //ShallowSerialization(_patientInstance);
         }
 
         static void DeepBinarySerailzation(object target)
@@ -132,6 +157,12 @@ namespace ObjectPersistance
             System.Runtime.Serialization.Formatters.Binary.BinaryFormatter _binFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
             System.IO.StreamWriter wr = new System.IO.StreamWriter($"../../{target.GetType().Name}custom.bin");
 
+            SurrogateSelector _surrogateSelector = new SurrogateSelector();
+            _surrogateSelector.AddSurrogate(
+                typeof(AddressInfo),
+                new StreamingContext(StreamingContextStates.All),
+                new AddressInfoSurrogator());
+            _binFormatter.SurrogateSelector = _surrogateSelector;
             _binFormatter.Serialize(wr.BaseStream, target);
             wr.Flush();
             wr.Close();
@@ -141,8 +172,14 @@ namespace ObjectPersistance
             //1.Formatter { Binary ,SOAP }
             System.Runtime.Serialization.Formatters.Binary.BinaryFormatter _binFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
             System.IO.StreamReader rd= new System.IO.StreamReader($"../../PatientInfocustom.bin");
+            SurrogateSelector _surrogateSelector = new SurrogateSelector();
+            _surrogateSelector.AddSurrogate(
+                typeof(AddressInfo),
+                new StreamingContext(StreamingContextStates.All),
+                new AddressInfoSurrogator());
+            _binFormatter.SurrogateSelector = _surrogateSelector;
 
-           object target= _binFormatter.Deserialize(rd.BaseStream);
+            object target= _binFormatter.Deserialize(rd.BaseStream);
             return target;
             
         }

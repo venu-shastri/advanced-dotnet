@@ -1,0 +1,7 @@
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\TargetApp\bin\Debug\TargetApp.exe.config
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\TargetApp\bin\Debug\TargetApp.exe
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\TargetApp\bin\Debug\TargetApp.pdb
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\TargetApp\obj\Debug\TargetApp.csprojAssemblyReference.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\TargetApp\obj\Debug\TargetApp.csproj.CoreCompileInputs.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\TargetApp\obj\Debug\TargetApp.exe
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\TargetApp\obj\Debug\TargetApp.pdb
