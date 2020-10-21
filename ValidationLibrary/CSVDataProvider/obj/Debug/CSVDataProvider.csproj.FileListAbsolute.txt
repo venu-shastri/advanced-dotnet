@@ -1,0 +1,7 @@
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\CSVDataProvider\bin\Debug\CSVDataProvider.exe.config
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\CSVDataProvider\bin\Debug\CSVDataProvider.exe
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\CSVDataProvider\bin\Debug\CSVDataProvider.pdb
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\CSVDataProvider\obj\Debug\CSVDataProvider.csprojAssemblyReference.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\CSVDataProvider\obj\Debug\CSVDataProvider.csproj.CoreCompileInputs.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\CSVDataProvider\obj\Debug\CSVDataProvider.exe
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\CSVDataProvider\obj\Debug\CSVDataProvider.pdb

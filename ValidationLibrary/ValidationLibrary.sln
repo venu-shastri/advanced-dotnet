@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TargetApp", "TargetApp\Targ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSVDataProvider", "CSVDataProvider\CSVDataProvider.csproj", "{1A39ADC9-845F-41CC-8772-B220DA2E7DA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicKeyword", "DynamicKeyword\DynamicKeyword.csproj", "{4436F1C3-B9BA-4FA9-81EE-D3A7C0EC86D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{1A39ADC9-845F-41CC-8772-B220DA2E7DA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A39ADC9-845F-41CC-8772-B220DA2E7DA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A39ADC9-845F-41CC-8772-B220DA2E7DA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4436F1C3-B9BA-4FA9-81EE-D3A7C0EC86D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4436F1C3-B9BA-4FA9-81EE-D3A7C0EC86D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4436F1C3-B9BA-4FA9-81EE-D3A7C0EC86D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4436F1C3-B9BA-4FA9-81EE-D3A7C0EC86D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

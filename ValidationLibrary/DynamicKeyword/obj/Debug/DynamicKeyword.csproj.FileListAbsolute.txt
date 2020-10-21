@@ -1,0 +1,7 @@
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\DynamicKeyword\bin\Debug\DynamicKeyword.exe.config
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\DynamicKeyword\bin\Debug\DynamicKeyword.exe
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\DynamicKeyword\bin\Debug\DynamicKeyword.pdb
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\DynamicKeyword\obj\Debug\DynamicKeyword.csprojAssemblyReference.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\DynamicKeyword\obj\Debug\DynamicKeyword.csproj.CoreCompileInputs.cache
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\DynamicKeyword\obj\Debug\DynamicKeyword.exe
+D:\knowledge\Advancd-Dotnet\advanced-dotnet\ValidationLibrary\DynamicKeyword\obj\Debug\DynamicKeyword.pdb
