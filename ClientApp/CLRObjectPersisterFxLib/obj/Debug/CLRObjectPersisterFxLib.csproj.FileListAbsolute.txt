@@ -1,0 +1,5 @@
+C:\Users\user\source\repos\ClientApp\CLRObjectPersisterFxLib\bin\Debug\CLRObjectPersisterFxLib.dll
+C:\Users\user\source\repos\ClientApp\CLRObjectPersisterFxLib\bin\Debug\CLRObjectPersisterFxLib.pdb
+C:\Users\user\source\repos\ClientApp\CLRObjectPersisterFxLib\obj\Debug\CLRObjectPersisterFxLib.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\ClientApp\CLRObjectPersisterFxLib\obj\Debug\CLRObjectPersisterFxLib.dll
+C:\Users\user\source\repos\ClientApp\CLRObjectPersisterFxLib\obj\Debug\CLRObjectPersisterFxLib.pdb

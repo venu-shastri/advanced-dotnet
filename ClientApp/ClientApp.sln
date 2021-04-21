@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp6", "ConsoleApp6\ConsoleApp6.csproj", "{36489550-30C8-4339-BE3C-25F60224D7CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLRObjectPersisterFxLib", "CLRObjectPersisterFxLib\CLRObjectPersisterFxLib.csproj", "{A51217B3-6498-47DC-AFB0-010DD9AB1057}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36489550-30C8-4339-BE3C-25F60224D7CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36489550-30C8-4339-BE3C-25F60224D7CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36489550-30C8-4339-BE3C-25F60224D7CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36489550-30C8-4339-BE3C-25F60224D7CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A51217B3-6498-47DC-AFB0-010DD9AB1057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A51217B3-6498-47DC-AFB0-010DD9AB1057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A51217B3-6498-47DC-AFB0-010DD9AB1057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A51217B3-6498-47DC-AFB0-010DD9AB1057}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {710759CA-4B01-4B47-ABCA-BFF458DFD5C9}
+	EndGlobalSection
+EndGlobal
