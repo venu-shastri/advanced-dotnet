@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,11 +24,18 @@ namespace CLRObjectPersisterFxLib
         XML,
         JSON,CSV
     }
-    public struct PropertyMap
+    public class PropertyMap
     {
         public string Name { get; set; }
         public object Value { get; set; }
         public Type DataType { get; set; }
+
+        
+    }
+    public class XMLPropertyMap : PropertyMap
+    {
+        public bool IsAttribute { get; set; }
+        public bool IsElement { get; set; }
     }
    
     public class ObjectPersister
@@ -43,51 +50,39 @@ namespace CLRObjectPersisterFxLib
             this._sourceType = sourceType;
         }
 
-        public List<PropertyMap> GetAllPropertyInfo(object source)
+        public List<System.Reflection.PropertyInfo> GetAllPropertyInfo(object source)
         {
-            List<PropertyMap> _propertyMap = new List<PropertyMap>();
+            
             System.Reflection.PropertyInfo[] properties = this._sourceType.GetProperties(
                 System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
-          if(properties.Length > 0)
-            {
-                foreach(System.Reflection.PropertyInfo property in properties)
-                {
-                   object[] attributes= property.GetCustomAttributes(true);
-                    foreach(object attribute in attributes)
-                    {
-                        if (attribute is XMLElementAttribute) { }
-                        if(attribute is XMLAttributeAttribute) { }
-                    }
-                    PropertyMap _property = new PropertyMap
-                    {
-                        Name = property.Name,
-                        DataType = property.PropertyType,
-                        Value = property.GetValue(source)
-                    };
-                    _propertyMap.Add(_property);
+            return properties.ToList();
 
-                }
-            }
-            return _propertyMap;
+          
         }
         public void Persist(object source,FormatType targetFormat)
         {
-            //Use Reflectionn to list public properties 
-          List<PropertyMap>_propertyMap=  GetAllPropertyInfo(source);
-            //xml,json,.......
-            switch (targetFormat)
+            
+            
+             switch (targetFormat)
             {
-                case FormatType.XML: this.ObjectToXML(source, _propertyMap); break;
+                case FormatType.XML: this.ObjectToXML(source); break;
                 case FormatType.JSON: break;
                 case FormatType.CSV: break;
             }
         }
-        private void ObjectToXML(object source,List<PropertyMap> propertyList)
+        private void ObjectToXML(object source)
         {
            System.Xml.XmlWriter _writer= System.Xml.XmlWriter.Create(source.GetType().Name + new Guid().ToString());
             _writer.WriteStartDocument();
             _writer.WriteStartElement(source.GetType().Name);
-            foreach(PropertyMap property in propertyList)
+           IEnumerable<XMLPropertyMap> properties= GetXMLPropertyMap(source);
+           IEnumerable<XMLPropertyMap> attributeProp= properties.Where(p => p.IsAttribute == true);
+           foreach(XMLPropertyMap property in attributeProp)
+            {
+                _writer.WriteAttributeString(property.Name, property.Value.ToString());
+            }
+            IEnumerable<XMLPropertyMap> elementProp = properties.Where(p => p.IsElement == true);
+            foreach (XMLPropertyMap property in elementProp)
             {
                 _writer.WriteElementString(property.Name, property.Value.ToString());
             }
@@ -98,6 +93,32 @@ namespace CLRObjectPersisterFxLib
 
            
 
+        }
+        private IEnumerable<XMLPropertyMap> GetXMLPropertyMap(object source)
+        {
+            List<XMLPropertyMap> _properties = new List<XMLPropertyMap>();
+            foreach (System.Reflection.PropertyInfo property in GetAllPropertyInfo(source))
+            {
+                object[] attributes = property.GetCustomAttributes(true);
+                XMLPropertyMap xmlPropertyMap = new XMLPropertyMap();
+                xmlPropertyMap.Name = property.Name;
+                xmlPropertyMap.DataType = property.PropertyType;
+                xmlPropertyMap.Value = property.GetValue(source);
+
+                foreach (object attribute in attributes)
+                {
+                    if (attribute is XMLAttributeAttribute)
+                    {
+                        xmlPropertyMap.IsAttribute = true;
+                    }
+                    if (attribute is XMLElementAttribute)
+                    {
+                        xmlPropertyMap.IsElement = true;
+                    }
+                }
+                _properties.Add(xmlPropertyMap);
+            }
+            return _properties;
         }
      
     }
