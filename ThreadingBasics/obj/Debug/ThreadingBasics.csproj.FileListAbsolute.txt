@@ -1,0 +1,7 @@
+C:\Users\user\source\repos\ClientApp\ThreadingBasics\obj\Debug\ThreadingBasics.csprojAssemblyReference.cache
+C:\Users\user\source\repos\ClientApp\ThreadingBasics\obj\Debug\ThreadingBasics.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\ClientApp\ThreadingBasics\bin\Debug\ThreadingBasics.exe.config
+C:\Users\user\source\repos\ClientApp\ThreadingBasics\bin\Debug\ThreadingBasics.exe
+C:\Users\user\source\repos\ClientApp\ThreadingBasics\bin\Debug\ThreadingBasics.pdb
+C:\Users\user\source\repos\ClientApp\ThreadingBasics\obj\Debug\ThreadingBasics.exe
+C:\Users\user\source\repos\ClientApp\ThreadingBasics\obj\Debug\ThreadingBasics.pdb
